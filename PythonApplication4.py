@@ -6,6 +6,7 @@ from string import *
 #v=k=m=t=0
 #tekst=input("Sisesta sõna vöi lause: ").lower()
 #tekst_list=list(tekst)
+#for sümbol in tekst_list:
 #    if sümbol in vokaali:
 #        v+=1
 #    elif sümbol in konsonanti:
@@ -86,10 +87,30 @@ from string import *
 #    except:
 #        pass
 
-#6
+#9
+andmeid=input("Sisesta teie nimi: ")
+nimi=[andmeid]
+for i in nimi:
+    if i.isdigit():
+        print("Viga! Sisestada saab ainult tähti!")
+    else:
+        print("Tere", andmeid.capitalize())
+vokaali="aeuoiüöõä"
+konsonanti="qwrtpsdfghjklzxcvbnm"
+v=k=0
+andmeid_list=list(andmeid.lower())
+for sümbol in andmeid_list:
+    if sümbol in vokaali:
+        v+=1
+    elif sümbol in konsonanti:
+        k+=1
+kokku=v+k
+print("Tähti kokku: ",kokku)
+print("Vokaali:",v,"\nKonsonanti:",k)
 
 
-
+        
+    
 
 
 
